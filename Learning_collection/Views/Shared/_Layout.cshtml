@@ -24,17 +24,58 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            DataTransfer
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/DataTransfer/Tempdata">Tempdata</a></li>
+                            <li><a href="~/DataTransfer/AddTempdata">AddTempdata</a></li>
+                            <li><a href="~/DataTransfer/ViewDataBag">ViewDataBag</a></li>
+                            <li><a href="~/DataTransfer/Random">ViewModel</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Jquery
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/Jquery/Simple">Simple</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Database
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/Database/DataInsert">DataInsert</a></li>
+                            <li><a href="~/Database/ShowData_1">ShowData_1</a></li>
+                            <li><a href="~/Database/SearchByEmail">SearchByEmail</a></li>
+                            <li><a href="~/Database/partialview">PartialViewSearch</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            SendEmail
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/SendEmail/SendEmail">SendEmail</a></li>
+                            <li><a href="~/SendEmail/SendEmail_2">SendEmail_2</a></li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("RWD", "index", "RWD")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <!--@@Html.Partial("_LoginPartial")-->
+                @Html.Partial("_MyLoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

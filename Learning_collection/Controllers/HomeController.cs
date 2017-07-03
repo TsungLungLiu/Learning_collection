@@ -10,6 +10,11 @@ namespace Learning_collection.Controllers
     {
         public ActionResult Index()
         {
+            if (Request.Cookies["username"] != null)
+            {
+                Session["user"] = Request.Cookies["username"].Value;
+            }
+
             return View();
         }
 

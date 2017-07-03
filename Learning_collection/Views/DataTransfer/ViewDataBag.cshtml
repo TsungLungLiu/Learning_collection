@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "ViewDataBag";
+}
+
+
+<h2>@ViewBag.Title</h2>
+<fieldset>
+    <legend>透過viewData、ViewBag來達到簡單的資料傳遞:</legend>
+    <p>
+        @ViewData["Hello"]
+    </p>
+    <p>
+        @ViewBag.MVC
+    </p>
+
+</fieldset>
+<fieldset>
+    <legend>若key直不小心取名一樣，則會發生以下狀況:</legend>
+    <p>
+        @ViewData["Error"]
+    </p>
+    <p>
+        @ViewBag.Error
+    </p>
+
+</fieldset>

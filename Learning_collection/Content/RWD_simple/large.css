@@ -1,0 +1,24 @@
+﻿
+.blue {
+    float: left;
+    width: 30%;
+    height: 100px;
+}
+
+.red {
+    
+    width: 30%;
+    height: 100px;
+    float:left;
+}
+
+.red:hover + .content {
+    visibility:visible;
+}
+
+.content {
+    visibility:hidden;
+    float: left;
+    width: 60%;
+    height: 100px;
+}

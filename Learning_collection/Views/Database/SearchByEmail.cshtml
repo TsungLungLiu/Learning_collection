@@ -1,0 +1,54 @@
+﻿
+@model Learning_collection.Models.Package
+@{
+    <!--Layout = null;-->
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchByEmail</title>
+</head>
+<body>
+    <h1>Search by Email</h1>
+    <div></div>
+    <form method="post" name="Email" action="~/Database/Get_email">
+        <label>Email</label>
+        <input name="Email" type="text" />
+        <input name="Submit1" type="submit" value="submit" />
+    </form>
+    @if (ViewData["show"] != null && (bool)ViewData["show"] == true)
+    {
+        <div></div>
+        <div></div>
+        if (Model.Email.Count == 0)
+        {
+            <div>Not found in the database</div>
+        }
+        else
+        {
+            <table>
+                <tr style="border:1px solid green; margin: 15px;">
+                    <td>Id</td>
+                    <td>Firstname</td>
+                    <td>Lastname</td>
+                    <td>Email</td>
+                </tr>
+                @for (int i = 0; i < Model.Email.Count; i++)
+                {
+                    <tr style="border:1px solid green; margin: 15px;">
+                        <td>@Model.Id[i]</td>
+                        <td>@Model.Firstname[i]</td>
+                        <td>@Model.Lastname[i]</td>
+                        <td>@Model.Email[i]</td>
+                    </tr>
+                }
+
+            </table>
+        }
+    }
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<h2>Login</h2>
+
+<form action="~/MyAccount/Login" method="post">
+    <label>Firstname:</label>
+    <input type="text"  name="Firstname" value="" /><br>
+    <label>Email:</label>
+    <input type="text"  name="email" value="" /><br>
+    <label>RememberMe:</label>
+    <input type="checkbox" name="RememberMe" value="Remember" /><br>
+    <input type="submit" value="Login" />
+    <span>@ViewData["Error"]</span>
+    
+
+</form>
+

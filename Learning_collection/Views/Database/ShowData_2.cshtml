@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Learning_collection.Models.Logindata>
+@*this line must be added to get list of students*@
+@*Use small m in model in start*@
+@* but use Capital M in model later using the obect*@
+@{
+    ViewBag.Title = "ShowData_2";
+}
+
+<h2>ShowData_2</h2>
+
+<table>
+    <tr style="border:1px solid green; margin: 5px;">
+        <td>Id</td>
+        <td>Firstname</td>
+        <td>Lastname</td>
+        <td>Email</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr style="border:1px solid green; margin: 5px;">
+            <td>@item.Id</td>
+            <td>@item.Firstname</td>
+            <td>@item.Lastname</td>
+            <td>@item.Email</td>
+        </tr>
+
+    }
+
+</table>
